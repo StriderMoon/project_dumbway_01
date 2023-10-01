@@ -26,13 +26,13 @@
 
     <div class="blog">
       <div class="blog-form">
-        <div class="from-container">
-          <from>
-            <h1> Creat Post Blog</h1>
+        <div class="form-container">
+          <form onsubmit="addBlog(event)">
+            <h1>Create Post Blog</h1>
             <div>
-              <label for="input-blog-tittle">Title</label>
-              <input type="text" id="input-blog-tittle">
-            </div>  
+              <label for="input-blog-title">Title</label>
+              <input type="text" id="input-blog-title" />
+            </div> 
             <div>
               <label for="input-blog-content">Content</label>
               <textarea id="input-blog-content"></textarea>
@@ -55,6 +55,40 @@
           </from>
         </div>
       </div>
+
+      <hr />
+      <div id="contents" class="blog-list">
+        <!-- Dynamic content would be here -->
+        <div class="blog-list-item">
+          <div class="blog-image">
+            <img src="/image/blog-img-detail.png" alt="" />
+          </div>
+          <div class="blog-content">
+            <div class="btn-group">
+              <button class="btn-edit">Edit Post</button>
+              <button class="btn-post">Delete Post</button>
+            </div>
+            <h1>
+              <a href="blog-detail.html"
+                >Pasar Coding di Indonesia Dinilai Masih Menjanjikan</a
+              >
+            </h1>
+            <div class="detail-blog-content">
+              12 Jul 2021 22:30 WIB | Ichsan Emrald Alamsyah
+            </div>
+            <p>
+              Ketimpangan sumber daya manusia (SDM) di sektor digital masih
+              menjadi isu yang belum terpecahkan. Berdasarkan penelitian
+              ManpowerGroup, ketimpangan SDM global, termasuk Indonesia,
+              meningkat dua kali lipat dalam satu dekade terakhir. Lorem ipsum,
+              dolor sit amet consectetur adipisicing elit. Quam, molestiae
+              numquam! Deleniti maiores expedita eaque deserunt quaerat! Dicta,
+              eligendi debitis?
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
+    <script src="blog.js"></script>
   </body>
 </html>
