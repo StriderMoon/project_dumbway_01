@@ -1,0 +1,47 @@
+.web-page {
+  margin-left: 10px;
+}
+
+.web-page {
+  display: grid;
+  grid-template-columns: 700px 500px;
+  margin: 60px;
+  padding: 10px;
+  justify-content: center;
+}
+
+.web-image img {
+ width: 600px;
+ margin-bottom: 10px;
+}
+
+.web-app-info {
+  margin-top: 60px;
+}
+
+.technologies-group {
+ display: grid;
+ grid-template-rows: 50px 50px;
+ grid-template-columns: 170px 170px;
+ margin: 10px;
+}
+
+.technologies-group div img {
+  width: 30px;
+}
+
+.technologies-group div {
+  display: grid;
+  grid-template-columns: 70px 100px;
+  align-items: center;
+}
+
+.artikel {
+  size: 16px;
+  width: 1000px;
+  margin-top: 30px;
+}
+
+
+
+

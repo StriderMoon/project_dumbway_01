@@ -1,29 +1,27 @@
 <html>
   <head>
-    <title>Blog</title>
-    <link rel="stylesheet" href="blog.css">
+    <title>Blog Page</title>
+    <link rel="stylesheet" href="css/blog.css" />
   </head>
-
   <body>
-    <nav><!--home-->
+    <nav>
       <div class="nav-left">
         <ul>
           <li>
-            <img src="icon/logo.png" alt="logo" />
+            <img src="image/logo.png" alt="logo" />
           </li>
           <li>
             <a href="index.html">Home</a>
           </li>
           <li>
-            <a href="blog.html">Blog</a>
+            <a class="active" href="blog.html">Blog</a>
           </li>
         </ul>
       </div>
       <div class="nav-right">
-        <a href="contact_me.html">Contact Me...</a>
+        <a href="contact.html">Contact</a>
       </div>
     </nav>
-
     <div class="blog">
       <div class="blog-form">
         <div class="form-container">
@@ -32,7 +30,7 @@
             <div>
               <label for="input-blog-title">Title</label>
               <input type="text" id="input-blog-title" />
-            </div> 
+            </div>
             <div>
               <label for="input-blog-content">Content</label>
               <textarea id="input-blog-content"></textarea>
@@ -40,28 +38,25 @@
             <div>
               <label>File Upload</label>
               <div class="input-blog-image-group">
-                  <label for="input-blog-image">
-                    <p>Attach Files</p>
-                    <img src="/icon/pin-file.png"/>
-                  </label>
-                  <input type="file" id="input-blog-image" hidden />
+                <label for="input-blog-image">
+                  <p>Attach Files</p>
+                  <img src="image/file.png" />
+                </label>
+                <input type="file" id="input-blog-image" hidden />
               </div>
             </div>
             <div class="button-group">
-              <button>
-                Post Blog
-              </button>
+              <button>Post Blog</button>
             </div>
-          </from>
+          </form>
         </div>
       </div>
-
       <hr />
       <div id="contents" class="blog-list">
-        <!-- Dynamic content would be here -->
+        <!-- dynamic content would be here -->
         <div class="blog-list-item">
           <div class="blog-image">
-            <img src="/image/blog-img-detail.png" alt="" />
+            <img src="image/blog-img-detail.png" alt="" />
           </div>
           <div class="blog-content">
             <div class="btn-group">
@@ -89,6 +84,6 @@
         </div>
       </div>
     </div>
-    <script src="blog.js"></script>
+    <script src="js/blog.js"></script>
   </body>
 </html>
