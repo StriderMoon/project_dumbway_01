@@ -1,0 +1,149 @@
+body {
+  background-color: rgb(228, 228, 228);
+}
+
+.form-add-project {
+  display: flex;
+  font-size: 16px;
+  margin: 40px auto;
+  width: 500px auto;
+  flex-direction: column;
+  align-items: center;
+  /* border: solid rgb(155, 155, 155); */
+  /* border-radius: 25px; */
+}
+
+.form-add-project div {
+  margin-top: 10px;
+}
+
+.project-name input{
+  width: 215px ;
+}
+.date-text input {
+  display: flex;
+  width: 100px ;
+  justify-content: space-between;
+  
+}
+
+.project-name input, .date-text input {
+  height: 25px;
+  border: none;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.date-text {
+  display: flex;
+  gap: 1em;
+  /* justify-content: center; */
+  /* grid-template-columns: 100px 100px; */
+}
+
+.checkbox {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-template-rows: 40px 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.input-blog-image-group {
+  width: 250px;
+  font-weight: 400;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  background: rgb(221, 217, 217);
+  border: 1px solid #c4c4c4;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.input-blog-image-group label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.submit-button {
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 16px;
+  width: 10%;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  background-color: orangered;
+  color: white;
+}
+
+.submit-button :hover {
+  color: orangered;
+  background-color: white;
+}
+
+.page-title {
+  text-align: center;
+}
+
+.page-profile {
+  margin: 20px;
+  padding: 20px;
+  border: solid;
+  width: 300px;
+  height: 300px auto;
+  border-radius: 10px;
+  border-color: chocolate;
+}
+
+.page-profile div {
+  margin-bottom: 5px;
+}
+
+.image-project img {
+  object-fit: contain;
+  width: 300px;
+  height: 300px;
+}
+
+.logo img {
+  margin-right: 5px;
+  width: 20px;
+}
+
+h4 {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.page-blog-button {
+  display: flex;
+  justify-content: space-around;
+}
+
+.page-blog-button button {
+  border: none;
+  background-color: orangered;
+  color: white;
+  border-radius: 10px;
+  width: 60px;
+  height: 25px;
+  margin-top: 10px;
+}
+
+.page-project {
+  display: flex;
+  justify-content: center;
+}
+
+.description {
+  color: rgb(131, 131, 131);
+}
+
+.project-info {
+
+}

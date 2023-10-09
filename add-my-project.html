@@ -1,41 +1,63 @@
 <html>
   <head>
-    add my project
+    <title> add my project </title>
+    <link rel="stylesheet" href="CSS/blog.css">
+    <link rel="stylesheet" href="CSS/add-my-project.css">
   </head>
 
   <body>
-    <form>
-      <div>
-        <label for="fname">Project name</label><br>
-        <input type="text" id="fname" name="fname"><br>
+    <nav><!--home-->
+      <div class="nav-left">
+        <ul>
+          <li>
+            <img src="icon/logo.png" alt="logo" />
+          </li>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="blog.html">Blog</a>
+          </li>
+        </ul>
       </div>
-      <div>
+      <div class="nav-right">
+        <a href="contact_me.html">Contact Me...</a>
+      </div>
+    </nav>
+
+      <form class="form-add-project">
+        <div class="project-name">
+          <label for="fname">Project name</label><br>
+          <input type="text" id="fname" name="fname" >
+        </div>
         <div class="date-text">
-          <label for="lname">Start Date</label><br>
-          <input type="text" id="lname" name="lname">
+          <div>
+            <label for="lname">Start Date</label><br>
+            <input type="text" id="lname" name="lname">
+          </div>
+          <div>
+            <label for="lname">End Date</label><br>
+            <input type="text" id="lname" name="lname">
+          </div>
         </div>
-        <div>
-          <label for="lname">End Date</label><br>
-          <input type="text" id="lname" name="lname"><br>
-        </div>
-      </div>
-      
-      <div class="checkbox">
-        <div>
-          <input type="checkbox" id="Checkbox" name="code1" value="nodejs">
-          <label for="code1">Node Js</label><br>
-        </div>
-        <div>
-          <input type="checkbox" id="Checkbox" name="code2" value="nextjs">
-          <label for="code2">Next Js</label><br>
-        </div>
-        <div>
-          <input type="checkbox" id="Checkbox" name="code3" value="reactjs">
-          <label for="code3">React Js</label><br>
-        </div>
-        <div>
-          <input type="checkbox" id="Checkbox" name="code4" value="typescript">
-          <label for="code4">TypeScript</label><br>
+        
+        <div class="checkbox">
+          <div>
+            <input type="checkbox" id="Checkbox" name="code1" value="nodejs">
+            <label for="code1">Node Js</label>
+          </div>
+          <div>
+            <input type="checkbox" id="Checkbox" name="code2" value="nextjs">
+            <label for="code2">Next Js</label>
+          </div>
+          <div>
+            <input type="checkbox" id="Checkbox" name="code3" value="reactjs">
+            <label for="code3">React Js</label>
+          </div>
+          <div>
+            <input type="checkbox" id="Checkbox" name="code4" value="typescript">
+            <label for="code4">TypeScript</label>
+          </div>
         </div>
       </div>
       
@@ -49,34 +71,107 @@
           <input type="file" id="input-blog-image" hidden />
         </div>
       </div>
-      <button>submit</button>
+      <button class="submit-button">submit</button>
     </form>
 
-    <div class="page-title">
-      myproject
-    </div>
-    <div class="page-profile">
-      <div>
-        gambar
+    <h1 class="page-title">
+      My Project
+    </h1>
+
+    <div class="page-project">
+      <!-- page 1 -->
+      <div class="page-profile">
+        <div class="image-project">
+          <img src="image/october.jpg" alt="image">
+        </div>
+        <div class="project-info">
+          <div>
+            <h4>My Birthday</h4>
+          </div>
+          <div class="description">
+            1 weak
+          </div>
+          <div>
+            this my birthday guys
+          </div>
+          <div class="logo">
+            <img src="icon/icons8-playstore-50.png" alt="logo">
+            <img src="icon/icons8-android-50.png" alt="logo">
+            <img src="icon/icons8-java-50.png" alt="logo">
+          </div>
+          <div class="page-blog-button">
+            <button>
+              Edit
+            </button>
+            <button>
+              Delete
+            </button>
+          </div>
+        </div>
       </div>
-      <div>
-        title
+      
+      <!-- page 2 -->
+      <div class="page-profile">
+        <div class="image-project">
+          <img src="image/new-hair-cut.jpg" alt="image">
+        </div>
+          <div class="project-info">
+            <div>
+              <h4>I got a new haircut</h4>
+            </div>
+            <div class="description">
+              1 weak
+            </div>
+            <div>
+              new hair cut
+            </div>
+            <div class="logo">
+              <img src="icon/icons8-playstore-50.png" alt="logo">
+              <img src="icon/icons8-android-50.png" alt="logo">
+              <img src="icon/icons8-java-50.png" alt="logo">
+            </div>
+            <div class="page-blog-button">
+              <button>
+                Edit
+              </button>
+              <button>
+                Delete
+              </button>
+          </div>
+        </div>
       </div>
-      <div>
-        duration
+
+      <!-- page 3 -->
+      <div class="page-profile">
+        <div class="image-project">
+          <img src="image/Braking-bread.jpg" alt="image">
+        </div>
+        <div class="project-info">
+          <div>
+            <h4>just a bread</h4>
+          </div>
+          <div class="description">
+            1 weak
+          </div>
+          <div>
+            bread
+          </div>
+          <div class="logo">
+            <img src="icon/icons8-playstore-50.png" alt="logo">
+            <img src="icon/icons8-android-50.png" alt="logo">
+            <img src="icon/icons8-java-50.png" alt="logo">
+          </div>
+          <div class="page-blog-button">
+            <button>
+              Edit
+            </button>
+            <button>
+              Delete
+            </button>
+          </div>
+        </div>
       </div>
-      <div>
-        descript
-      </div>
-      <div>
-        app logo playstor android java
-      </div>
-      <button>
-        edit
-      </button>
-      <button>
-        delete
-      </button>
+
     </div>
 
   </body>
