@@ -1,25 +1,21 @@
 let dataBlog = [];
 
-function addBlog(event) {
+function addblog(event) {
   event.preventDefault();
 
-  let title = document.getElementById("input-blog-title").value;
-  let content = document.getElementById("input-blog-content").value;
+  let title = document.getElementById("Project-name-input").value;
+  let start_date = document.getElementById("start-date-input").value;
+  let end_date = document.getElementById("end-date-input").value;
   let image = document.getElementById("input-blog-image").files;
 
-  // untuk membuat url gambar, agar image dapat ditampilkan
   image = URL.createObjectURL(image[0]);
-  //   console.log(image);
 
   let blog = {
-    title,
-    content,
+    title, 
     image,
-    postAt: new Date(),
-    author: "Abel Dustin",
   };
 
-  dataBlog.push(blog); //memasukan data
+  dataBlog.push(blog);
   console.log(dataBlog);
 
   renderBlog();
@@ -32,34 +28,35 @@ function renderBlog() {
     console.log(dataBlog[index]);
 
     document.getElementById("contents").innerHTML += `
-        <div class="blog-list-item">
-            <div class="blog-image">
-                <img src="${dataBlog[index].image}" alt="" />
-            </div>
-            <div class="blog-content">
-                <div class="btn-group">
-                    <button class="btn-edit">Edit Post</button>
-                    <button class="btn-post">Delete Post</button>
-                </div>
-                <h1>
-                    <a target="_blank" href="blog-detail.html">${
-                      dataBlog[index].title
-                    }</a>
-                </h1>
-                <div class="detail-blog-content">
-                    ${getFullTime(dataBlog[index].postAt)} | ${
-      dataBlog[index].author
-    }
-                </div>
-                <p>${dataBlog[index].content}</p>
-
-                <div style="float:right; margin:10px;">
-                  <p style="font-size:15px; color:grey;">${getDistanceTime(
-                    dataBlog[index].postAt
-                  )}</p>
-                </div>
-            </div>
+      <div class="page-profile">
+        <div class="image-project">
+          <img src="${dataBlog[index].image}" alt="image">
         </div>
+        <div class="project-info">
+          <div>
+            <h4>${dataBlog[index].title}</h4>
+          </div>
+          <div class="description">
+          ${getDistanceTime(dataBlog[index].postAt)}
+          </div>
+          <div>
+            new page 
+          </div>
+          <div class="logo">
+            <img src="icon/icons8-playstore-50.png" alt="logo">
+            <img src="icon/icons8-android-50.png" alt="logo">
+            <img src="icon/icons8-java-50.png" alt="logo">
+          </div>
+          <div class="page-blog-button">
+            <button>
+              Edit
+            </button>
+            <button>
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
     `;
   }
 }
@@ -102,6 +99,7 @@ function getFullTime(time) {
     minutes = "0" + minutes;
   }
 
+  // 4 Oct 2023 09:30 WIB
   return `${date} ${monthName[monthIndex]} ${year} ${hours}:${minutes} WIB`;
 }
 

@@ -18,16 +18,16 @@ body {
 }
 
 .project-name input{
-  width: 215px ;
+  width: 300px ;
 }
 .date-text input {
   display: flex;
-  width: 100px ;
+  width: 144px ;
   justify-content: space-between;
-  
 }
 
 .project-name input, .date-text input {
+  margin-top: 5px;
   height: 25px;
   border: none;
   background-color: #ffffff;
@@ -50,7 +50,7 @@ body {
 }
 
 .input-blog-image-group {
-  width: 250px;
+  width: 300px;
   font-weight: 400;
   padding: 8px;
   margin-top: 5px;
@@ -81,9 +81,11 @@ body {
   color: white;
 }
 
-.submit-button :hover {
+.submit-button:hover {
   color: orangered;
   background-color: white;
+  font-weight: bold;
+  border: 2px solid;
 }
 
 .page-title {
