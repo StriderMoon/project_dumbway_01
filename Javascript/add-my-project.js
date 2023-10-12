@@ -1,6 +1,6 @@
 let dataBlog = [];
 
-function addblog(event) {
+function addBlog(event) {
   event.preventDefault();
 
   let title = document.getElementById("Project-name-input").value;
