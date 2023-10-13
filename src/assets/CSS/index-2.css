@@ -1,0 +1,104 @@
+.main-profile {
+  display: flex;
+  width: 80%;
+  margin: 50px auto;
+}
+
+.main-profile div div h1 {
+  margin-top: 0px;
+}
+
+.profile {
+}
+
+.logo-sosial-media {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.logo-sosial-media {
+  
+}
+
+.logo-sosial-media button {
+  border: none;
+  background-color: transparent;
+  margin: 0px 20px;
+  
+}
+
+.logo-sosial-media button img {
+  border: solid 2px;
+  border-radius: 30px;
+  width: 25px;
+  padding: 8px;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+.contact button {
+  font-size: 15px;
+  border: none;
+  border-radius: 25px;
+  background-color: orangered;
+  color: white;
+  width: 150px;
+  height: 50px;
+}
+
+.download-cv {
+  display: flex;
+  height: 3%;
+  align-items: center;
+  border: 2px solid;
+  border-radius: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  border: orangered solid 2px;
+}
+
+.profile-info div img {
+  width: 400px;
+}
+
+.name {
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+
+.title {
+  margin-top: 0px;
+  color: gray;
+}
+
+h3 {
+  margin-bottom: 6px;
+}
+
+.skill {
+  margin-bottom: 25px;
+}
+
+.skill div button{
+  font-size: 10px;
+  font-weight: bold;
+  background-color: #111f4D;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 20px;
+  margin: 5px 10px;
+}

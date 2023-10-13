@@ -47,9 +47,9 @@ function renderBlog() {
             <p>${dataBlog[i].start_date} - ${dataBlog[i].end_date}</p>
           </div>
           <div class="logo">
-            <img src="icon/icons8-playstore-50.png" alt="logo">
-            <img src="icon/icons8-android-50.png" alt="logo">
-            <img src="icon/icons8-java-50.png" alt="logo">
+            <img src="/src/assets/icon/icons8-playstore-50.png" alt="logo">
+            <img src="/src/assets/icon/icons8-android-50.png" alt="logo">
+            <img src="/src/assets/icon/icons8-java-50.png" alt="logo">
           </div>
           <div class="page-blog-button">
             <button>
