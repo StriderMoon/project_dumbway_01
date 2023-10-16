@@ -46,16 +46,6 @@ nav ul li {
   border-radius: 5px;
 }
 
-.nav-right button img {
-  background-color: orangered;
-  padding: 8px 25px;
-  border-radius: 5px;
-}
-
-.nav-right button {
-  border: none;
-}
-
 .nav-left {
   flex: 50%;
 }
