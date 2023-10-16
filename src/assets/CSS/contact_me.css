@@ -30,6 +30,8 @@ nav ul li {
 }
 
 .nav-right {
+  display: flex;
+  justify-content: end;
   flex: 50%; 
   text-align: end;
   margin-right: 25px;
@@ -38,8 +40,23 @@ nav ul li {
 .nav-right a {
   background-color: orangered;
   padding: 8px 25px;
+  width: fit-content;
   color: white;
   border-radius: 5px;
+}
+
+.nav-right button img {
+  background-color: orangered;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.nav-right button {
+  border: none;
+}
+
+.humberger-btr {
+  cursor: pointer;
 }
 
 .nav-left {
@@ -70,3 +87,5 @@ input, select, textarea {
   border: 1px solid #dbdbdb;
   resize: none;
 }
+
+
