@@ -19,6 +19,7 @@ app.get('/', home)
 app.get('/testing-bootstrap', bootstrap)
 app.get('/blog', blog)
 app.get('/blog-detail/:id', blogdDetail)
+app.get('/testimonial', testimonial)
 app.get('/addblog', formblog)
 app.post('/addblog', addblog)
 
@@ -38,6 +39,10 @@ function bootstrap(req, res) {
 
 function blog(req, res) {
   res.render('blog')
+}
+
+function testimonial(req, res) {
+  res.render('testimonial')
 }
 
 function formblog(req, res) {

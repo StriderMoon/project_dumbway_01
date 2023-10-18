@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Testimonial
+    </title>
+  </head>
+
+  <body>
+    <html>
+  <head>
+    <title>Testimonial</title>
+    <link rel="stylesheet" href="/CSS/testimonial.css" />
+    <link rel="stylesheet" href="/CSS/add-my-project.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <ul>
+          <li>
+            <img src="/icon/logo.png" alt="logo" />
+          </li>
+          <li class="item-collapse">
+            <a href="/views/index.html">Home</a>
+          </li>
+          <li class="item-collapse">
+            <a href="/views/blog.html">Blog</a>
+          </li>
+          <li class="item-collapse">
+            <a class="active" href="/views/testimonial.html">Testimonial</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-right item-collapse">
+        <a href="/views/contact.html">Contact</a>
+      </div>
+      <div class="nav-right" id="barsmenu">
+        <button
+          style="background-color: transparent; border: none; cursor: pointer"
+          onclick="openHamburger()"
+        >
+          <i class="fa-2x fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div class="hamburger-nav-container" id="hamburger-nav-container">
+      <a href="/views/index.html" class="hamburger-active">Home</a>
+      <a href="/views/blog.html">Blog</a>
+      <a href="/views/contact.html">Contact Me</a>
+    </div>
+
+    <div class="container">
+      <h1>My Testimonial</h1>
+      <div class="container-rating">
+        <h2>Rating By Star</h2>
+        <div class="rating">
+          <button class="rating-btn" onclick="showTestimonial()">All</button>
+          <button class="rating-btn" onclick="fillterTestimonial(1)">
+            <p class="fa-solid" style="margin: 5px">1</p>
+            <img src="/icon/star_FILL1_wght400_GRAD0_opsz24.svg" style="height: 20px;">
+            {{!-- 1 <i class="fa-solid fa-star"></i> --}}
+          </button>
+          <button class="rating-btn" onclick="fillterTestimonial(2)">
+            <p class="fa-solid" style="margin: 5px">2</p>
+            <img src="/icon/star_FILL1_wght400_GRAD0_opsz24.svg" style="height: 20px;">
+            {{!-- 2<i class="fa-solid fa-star"></i> --}}
+          </button>
+          <button class="rating-btn" onclick="fillterTestimonial(3)">
+            <p class="fa-solid" style="margin: 5px">3</p>
+            <img src="/icon/star_FILL1_wght400_GRAD0_opsz24.svg" style="height: 20px;">
+            {{!-- 3 <i class="fa-solid fa-star"></i> --}}
+          </button>
+          <button class="rating-btn" onclick="fillterTestimonial(4)">
+            <p class="fa-solid" style="margin: 5px">4</p>
+            <img src="/icon/star_FILL1_wght400_GRAD0_opsz24.svg" style="height: 20px;">
+            {{!-- 4 <i class="fa-solid fa-star"></i> --}}
+          </button>
+          <button class="rating-btn" onclick="fillterTestimonial(5)">
+            <p class="fa-solid" style="margin: 5px">5</p>
+            <img src="/icon/star_FILL1_wght400_GRAD0_opsz24.svg" style="height: 20px;">
+            {{!-- 5 <i class="fa-solid fa-star"></i> --}}
+          </button>
+        </div>
+      </div>
+      
+      <section class="testimonials" id="testimonials">
+        <div class="page-profile">
+          <div class="image-project">
+            <img src="/image/Braking-bread.jpg" alt="image">
+          </div>
+          <div class="project-info">
+            <div>
+              <h4>just a bread</h4>
+            </div>
+            <div class="description">
+              <p>1 weak</p>
+            </div>
+            <div>
+              <p>bread</p>
+            </div>
+            <div class="logo">
+              <img src="/icon/icons8-playstore-50.png" alt="logo">
+              <img src="/icon/icons8-android-50.png" alt="logo">
+              <img src="/icon/icons8-java-50.png" alt="logo">
+            </div>
+            <div class="page-blog-button">
+              <button>
+                Edit
+              </button>
+              <button>
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="/js/testimonial.js"></script>
+    <script src="/js/index.js"></script>
+  </body>
+</html>
+  </body>
+</html>

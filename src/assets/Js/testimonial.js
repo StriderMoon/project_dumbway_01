@@ -1,85 +1,118 @@
 const testimonialData = [
   {
-    author: "Abel Dustin",
-    quote: "Jasa yang mantap!",
-    image:
-      "https://images.unsplash.com/photo-1696246847440-bb0047ba93ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+    name: "noname 1",
+    commnent: "ini adalah test yang di jalankan di testimonial 1",
     rating: 5,
+    image: "/image/Doctor_pointing.jpg",
   },
   {
-    author: "Rizqullah",
-    quote: "Project kemarin gokil!",
-    image:
-      "https://images.unsplash.com/photo-1694875294031-169b75f14a2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1972&q=80",
+    name: "noname 2",
+    commnent: "ini adalah test yang di jalankan di testimonial 2",
     rating: 4,
+    image: "/image/Doctor_pointing.jpg",
   },
   {
-    author: "Jeanne D'Arc",
-    quote: "Best lah pokoknya!",
-    image:
-      "https://images.unsplash.com/photo-1696385989343-0df3db3c70c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
-    rating: 4,
+    name: "noname 3",
+    commnent: "ini adalah test yang di jalankan di testimonial 3",
+    rating: 1,
+    image: "/image/Doctor_pointing.jpg",
   },
   {
-    author: "Snoop Catt",
-    quote: "Kemarin website nya ada bug, tolong benerin dong!",
-    image:
-      "https://images.unsplash.com/photo-1695866648577-d833bf200754?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    name: "noname 4",
+    commnent: "ini adalah test yang di jalankan di testimonial 4",
     rating: 2,
+    image: "/image/Doctor_pointing.jpg",
+  },
+  {
+    name: "noname 5",
+    commnent: "ini adalah test yang di jalankan di testimonial 5",
+    rating: 5,
+    image: "/image/Doctor_pointing.jpg",
   },
 ];
 
-function allTestimonial() {
-  let testimonialHTML = "";
+function showTestimonial() {
+  let testimonialForHtml = ""
 
-  testimonialData.forEach(function (item) {
-    testimonialHTML += `
-            <div class="testimonial">
-                <img
-                    class="profile-testimonial"
-                    src="${item.image}"
-                    alt="profile"
-                />
-                <p class="quote">${item.quote}</p>
-                <p class="author">- ${item.author}</p>
-                <p class="author">${item.rating} <i class="fa-solid fa-star"></i></p>
-            </div>
-        `;
-  });
-
-  document.getElementById("testimonials").innerHTML = testimonialHTML;
+  testimonialData.forEach(item => {
+    testimonialForHtml += `
+      <div class="page-profile">
+        <div class="image-project">
+          <img src=${item.image} alt="image">
+        </div>
+        <div class="project-info">
+          <div>
+            <h4>${item.name}</h4>
+          </div>
+          <div class="description">
+            <p>1 weak</p>
+          </div>
+          <div>
+            <p>${item.commnent}</p>
+          </div>
+          <div class="logo">
+            <img src="/icon/icons8-playstore-50.png" alt="logo">
+            <img src="/icon/icons8-android-50.png" alt="logo">
+            <img src="/icon/icons8-java-50.png" alt="logo">
+          </div>
+          <div class="page-blog-button">
+            <button>
+              Edit
+            </button>
+            <button>
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    `
+  })
+  document.getElementById("testimonials").innerHTML = testimonialForHtml;
 }
+showTestimonial();
 
-allTestimonial();
+function fillterTestimonial(rating) {
+  let testimonialForHtml = "";
 
-// filtered testimonial
-function filterTestimonial(rating) {
-  let testimonialHTML = "";
+  const dataFiltered = testimonialData.filter(data => data.rating === rating)
+  // console.log(dataFiltered);
 
-  const testimonialFiltered = testimonialData.filter(function (item) {
-    return item.rating === rating;
-  });
-
-  //   console.log(testimonialFiltered);
-
-  if (testimonialFiltered.length === 0) {
-    testimonialHTML += `<h1> Data not found! </h1>`;
+  if(dataFiltered.length === 0) {
+    testimonialForHtml = `<h3>data not found !</h3>`;
   } else {
-    testimonialFiltered.forEach(function (item) {
-      testimonialHTML += `
-            <div class="testimonial">
-                <img
-                    class="profile-testimonial"
-                    src="${item.image}"
-                    alt="profile"
-                />
-                <p class="quote">${item.quote}</p>
-                <p class="author">- ${item.author}</p>
-                <p class="author">${item.rating} <i class="fa-solid fa-star"></i></p>
+    dataFiltered.forEach(item => {
+      testimonialForHtml += `
+        <div class="page-profile">
+          <div class="image-project">
+            <img src=${item.image} alt="image">
+          </div>
+          <div class="project-info">
+            <div>
+              <h4>${item.name}</h4>
             </div>
-        `;
+            <div class="description">
+              <p>1 weak</p>
+            </div>
+            <div>
+              <p>${item.commnent}</p>
+            </div>
+            <div class="logo">
+              <img src="/src/assets/icon/icons8-playstore-50.png" alt="logo">
+              <img src="/src/assets/icon/icons8-android-50.png" alt="logo">
+              <img src="/src/assets/icon/icons8-java-50.png" alt="logo">
+            </div>
+            <div class="page-blog-button">
+              <button>
+                Edit
+              </button>
+              <button>
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
     });
   }
-
-  document.getElementById("testimonials").innerHTML = testimonialHTML;
+  document.getElementById("testimonials").innerHTML = testimonialForHtml;
 }
