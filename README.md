@@ -6,12 +6,17 @@
   git push nama_remote main #melakukan push terhadap project ke dalam repository kita
 ```
 
+# -- Update
+
 ```bash
   git add . #untuk menambahkan semua file yang ada dalam folder kedalam commit | NOTE: (.) menandakan bahwa semua file akan ditambahkan
   git commit -m "pesan kalian" #untuk memberikan pesan ketika kita melakukan commit/push kedalam repository
   git push nama_remote main #melakukan push terhadap project ke dalam repository kita
 ```
 
+# -- CSS
+
+```bash
 type rignt:
 justift- #colomn
 align- #row
@@ -29,6 +34,9 @@ insert:
 flex-wrap: wrap #untuk mengikuti contener
 
 box-sizing: border-box #memasukan elemen padding dan boder dalam element dengan total ukuran yang sama
+```
+
+# -- JavaScript
 
 ```js
 const digits = [1, 2, 3, 4, 5];
