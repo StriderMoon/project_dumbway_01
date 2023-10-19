@@ -1,5 +1,7 @@
 ==bash==
   npm start #untuk menjalankan server
+  npm i bootstrap@s.3.2
+  npm i bootstra -v 5.3.2
 
 ==github==
   -=push=-

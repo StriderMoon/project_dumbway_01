@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: false }))
 
 // routing
 app.get('/', home)
-app.get('/testing-bootstrap', bootstrap)
+app.get('/home_bootstrap', bootstrap)
 app.get('/blog', blog)
 app.get('/blog-detail/:id', blogdDetail)
 app.get('/testimonial', testimonial)
@@ -34,7 +34,7 @@ function home(req, res) {
 }
 
 function bootstrap(req, res) {
-  res.render('testing-bootstrap')
+  res.render('home_bootstrap')
 }
 
 function blog(req, res) {
