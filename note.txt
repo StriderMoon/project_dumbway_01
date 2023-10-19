@@ -75,3 +75,10 @@
 //   return `${name} ${callback()}`
 // }
 // console.log(sayHello("noname", hello)); //noname hello world
+
+-=Package=-
+on terminal
+  npm install node-fetch
+
+on JavaScript
+  fetch('https://jsonplaceholder.typicode.com/user')
