@@ -22,6 +22,7 @@ app.get('/blog-detail/:id', blogdDetail)
 app.get('/testimonial', testimonial)
 app.get('/addblog', formblog)
 app.post('/addblog', addblog)
+app.get('/my-project-booststrap', myProjectBooststrap)
 
 
 // local server
@@ -47,6 +48,10 @@ function testimonial(req, res) {
 
 function formblog(req, res) {
   res.render('blog')
+} 
+
+function myProjectBooststrap(req, res) {
+  res.render('my-project-booststrap')
 } 
 
 function addblog(req, res) {
