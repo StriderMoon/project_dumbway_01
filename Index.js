@@ -22,7 +22,9 @@ app.get('/blog-detail/:id', blogdDetail)
 app.get('/testimonial', testimonial)
 app.get('/addblog', formblog)
 app.post('/addblog', addblog)
+app.get('/my-project', myProject)
 app.get('/my-project-booststrap', myProjectBooststrap)
+app.get('/contact_me', contactMe)
 
 
 // local server
@@ -50,9 +52,17 @@ function formblog(req, res) {
   res.render('blog')
 } 
 
+function myProject(req, res) {
+  res.render('my-project')
+}
+
 function myProjectBooststrap(req, res) {
   res.render('my-project-booststrap')
 } 
+
+function contactMe(req, res) {
+  res.render('contact_me')
+}
 
 function addblog(req, res) {
   const data = req.body
