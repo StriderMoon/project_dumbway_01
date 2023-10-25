@@ -1,6 +1,29 @@
-==bash==
+==npm==
   npm start #untuk menjalankan server
-  npm i bootstrap@s.3.2
+  cd src/
+
+==pgAdmin on vscode==               [name data bese]        [buat table]
+  npx sequelize-cli model:generate --name user --attributes name:string,email:string,password:string //buat table
+  npx sequelize db:migrate //untuk migrate
+
+  npx sequelize-cli seed:generate --name user //buat seed
+  npx sequelize-cli db:seed:all  
+
+
+==pgAdmin==
+INSERT INTO public."my project"(
+	id, username, password)
+	VALUES ('1', 'tio', 'admin');
+	
+SELECT id, username, password FROM "my project"
+ 
+UPDATE public."my project"
+	SET username='ryo'
+	WHERE id = 1;
+	
+DELETE FROM "my project" WHERE id = 2
+
+SELECT * FROM "my project"
 
 ==github==
   -=push=-
@@ -83,3 +106,6 @@ on terminal
 
 on JavaScript
   fetch('https://jsonplaceholder.typicode.com/user')
+
+
+

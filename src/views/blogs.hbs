@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>Blog Page</title>
-    <link rel="stylesheet" href="/CSS/blog.css" />
+    <link rel="stylesheet" href="/CSS/blogs.css" />
   </head>
   <body>
     <nav>
@@ -60,6 +60,7 @@
       <hr />
       <div id="contents" class="blog-list">
         <!-- dynamic content would be here -->
+        {{#each data}}
         <div class="blog-list-item">
           <div class="blog-image">
             <img src="/image/blog-img-detail.png" alt="" />
@@ -70,26 +71,21 @@
               <button class="btn-post">Delete Post</button>
             </div>
             <h1>
-              <a href="blog-detail"
-                >Pasar Coding di Indonesia Dinilai Masih Menjanjikan</a
-              >
+              <a href="blog-detail">
+                {{this.title}}
+                </a>
             </h1>
             <div class="detail-blog-content">
-              12 Jul 2021 22:30 WIB | Ichsan Emrald Alamsyah
+              {{this.createdAt}} | {{this.author}}
             </div>
             <p>
-              Ketimpangan sumber daya manusia (SDM) di sektor digital masih
-              menjadi isu yang belum terpecahkan. Berdasarkan penelitian
-              ManpowerGroup, ketimpangan SDM global, termasuk Indonesia,
-              meningkat dua kali lipat dalam satu dekade terakhir. Lorem ipsum,
-              dolor sit amet consectetur adipisicing elit. Quam, molestiae
-              numquam! Deleniti maiores expedita eaque deserunt quaerat! Dicta,
-              eligendi debitis?
+              {{this.content}}
             </p>
           </div>
         </div>
+        {{/each}}
       </div>
     </div>
   </body>
-  <script src="/Js/blog.js"></script>
+  <script src="/Js/blogs.js"></script>
 </html>

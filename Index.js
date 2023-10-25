@@ -4,6 +4,10 @@ const path = require('path')
 const app = express()
 const port = 5000
 
+const config =  require('./src/config/config.json')
+const { Sequelize, QueryTypes } = require("sequelize")
+const sequelize = new Sequelize(config.development)
+
 // setup to call hbs
 app.set('view engine', 'hbs')
 app.set('views', path.join(__dirname, 'src/views'))
@@ -17,7 +21,7 @@ app.use(express.urlencoded({ extended: false }))
 // routing
 app.get('/', home)
 app.get('/home_bootstrap', bootstrap)
-app.get('/blog', blog)
+app.get('/blogs', blogs)
 app.get('/blog-detail/:id', blogdDetail)
 app.get('/testimonial', testimonial)
 app.get('/addblog', formblog)
@@ -40,8 +44,20 @@ function bootstrap(req, res) {
   res.render('home_bootstrap')
 }
 
-function blog(req, res) {
-  res.render('blog')
+async function blogs(req, res) {
+  try {
+    const query = `SELECT id, title, image, content, 'blogs.createdAt' FROM blogs`
+    let obj = await sequelize.query(query, { type: QueryTypes.SELECT })
+    
+    const data = obj.map((res) => ({
+      ...res,
+      author: "Tio triananda",
+    }))
+
+    res.render('blogs', { data })
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 function testimonial(req, res) {
@@ -49,11 +65,23 @@ function testimonial(req, res) {
 }
 
 function formblog(req, res) {
-  res.render('blog')
+  res.render('blogs')
 } 
 
-function myProject(req, res) {
-  res.render('my-project')
+async function myProject(req, res) {
+  try {
+    const query = `SELECT id, project_name, start_date, end_date, content, image, "createdAt" FROM public."my-projects";`
+    let obj = await sequelize.query(query, { type: QueryTypes.SELECT })
+
+    const data = obj.map((res) => ({
+     ...res,
+    //  project_name: "testing project",
+    }))
+
+    res.render('my-project', { data })
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 function myProjectBooststrap(req, res) {
@@ -73,6 +101,7 @@ function blogdDetail(req, res) {
   const { id } = req.params
   // const id = req.params.id
   const data = {
+    id,
     title: "hanya title untuk test",
     content: "isi content ini hanya untuk test yang di gunakan"
   }

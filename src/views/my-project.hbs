@@ -2,7 +2,7 @@
 <html>
   <head>
     <title> add my project </title>
-    <link rel="stylesheet" href="/CSS/blog.css">
+    <link rel="stylesheet" href="/CSS/blogs.css">
     <link rel="stylesheet" href="/CSS/add-my-project.css">
   </head>
 
@@ -82,19 +82,20 @@
 
       <div id="contents" class="page-project">
         <!-- page 1 -->
+        {{#each data}}
         <div class="page-profile">
           <div class="image-project">
-            <img src="/image/october.jpg" alt="image">
+            <img src={{ this.image }} alt="image">
           </div>
           <div class="project-info">
             <div>
-              <h4>My Birthday</h4>
+              <h4>{{ this.project_name }}</h4>
             </div>
             <div class="description">
               <p>1 weak</p>
             </div>
             <div>
-              <p>this my birthday guys</p>
+              <p>{{ this.content }}</p>
             </div>
             <div class="logo">
               <img src="/icon/icons8-playstore-50.png" alt="logo">
@@ -111,6 +112,7 @@
             </div>
           </div>
         </div>
+        {{/each}}
         
         <!-- page 2 -->
         <div class="page-profile">
